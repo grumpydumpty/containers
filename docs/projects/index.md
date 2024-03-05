@@ -8,7 +8,7 @@ by Grumpy Dumpty
 
 Maintainer | January 1970 - Present
 
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers)  [:fontawesome-solid-book:](https://containers.lab.net)
+[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers)  [:fontawesome-solid-book:](http://containers.lab.net)
 
 ## [Hugo](http://containers.lab.net/hugo)
 
@@ -18,7 +18,7 @@ by Grumpy Dumpty
 
 Maintainer | January 1970 - Present
 
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/hugo)  [:fontawesome-solid-book:](https://containers.lab.net/hugo)
+[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/hugo)  [:fontawesome-solid-book:](http://containers.lab.net/hugo)
 
 ## [MkDocs](http://containers.lab.net/mkdocs)
 
@@ -28,7 +28,7 @@ by Grumpy Dumpty
 
 Maintainer | January 1970 - Present
 
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/mkdocs)  [:fontawesome-solid-book:](https://containers.lab.net/mkdocs)
+[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/mkdocs)  [:fontawesome-solid-book:](http://containers.lab.net/mkdocs)
 
 ## [Packer](http://containers.lab.net/packer)
 
@@ -38,7 +38,7 @@ by Grumpy Dumpty
 
 Maintainer | January 1970 - Present
 
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/packer)  [:fontawesome-solid-book:](https://containers.lab.net/packer)
+[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/packer)  [:fontawesome-solid-book:](http://containers.lab.net/packer)
 
 ## [Packer Plus](http://containers.lab.net/packerplus)
 
@@ -48,7 +48,7 @@ by Grumpy Dumpty
 
 Maintainer | January 1970 - Present
 
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/packerplus)  [:fontawesome-solid-book:](https://containers.lab.net/packerplus)
+[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/packerplus)  [:fontawesome-solid-book:](http://containers.lab.net/packerplus)
 
 ## [PowerCLI](http://containers.lab.net/powercli)
 
@@ -58,7 +58,7 @@ by Grumpy Dumpty
 
 Maintainer | January 1970 - Present
 
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/powercli)  [:fontawesome-solid-book:](https://containers.lab.net/powercli)
+[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/powercli)  [:fontawesome-solid-book:](http://containers.lab.net/powercli)
 
 ## [Tanzu](http://containers.lab.net/tanzu)
 
@@ -73,7 +73,7 @@ by Grumpy Dumpty
 
 Maintainer | January 1970 - Present
 
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/tanzu)  [:fontawesome-solid-book:](https://containers.lab.net/tanzu)
+[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/tanzu)  [:fontawesome-solid-book:](http://containers.lab.net/tanzu)
 
 ## [Terraform](http://containers.lab.net/terraform)
 
@@ -83,7 +83,7 @@ by Grumpy Dumpty
 
 Maintainer | January 1970 - Present
 
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/terraform)  [:fontawesome-solid-book:](https://containers.lab.net/terraform)
+[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/terraform)  [:fontawesome-solid-book:](http://containers.lab.net/terraform)
 
 ## [The Works](http://containers.lab.net/theworks)
 
@@ -93,4 +93,4 @@ by Grumpy Dumpty
 
 Maintainer | January 1970 - Present
 
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/thework)  [:fontawesome-solid-book:](https://containers.lab.net/theworks)
+[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/thework)  [:fontawesome-solid-book:](http://containers.lab.net/theworks)
