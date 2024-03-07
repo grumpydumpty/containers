@@ -1,7 +1,7 @@
 
 |                                        | Container Image | Build Status                                                                                                                                                                         |
 |----------------------------------------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ![](../assets/logos/containers-32.png) | containers      | ![Build](https://github.com/grumpydumpty/containers/actions/workflows/ci.yml/badge.svg)<br/>![Documentation](https://github.com/grumpydumpty/containers/actions/workflows/ci.yml/badge.svg?branch=gh-pages) |
+| ![](../assets/logos/containers-32.png) | containers      | ![Build Docker](https://github.com/grumpydumpty/containers/actions/workflows/build-docker.yml/badge.svg)<br/>![Build Documentation](https://github.com/grumpydumpty/containers/actions/workflows/build-docs.yml/badge.svg) |
 | ![](../assets/logos/containers-32.png) | containers      | [![pipeline status](https://gitlab.eng.vmware.com/sydney/containers/containers/badges/main/pipeline.svg)](https://gitlab.eng.vmware.com/sydney/containers/containers/-/commits/main) |
 | ![](../assets/logos/hugo-32.png)       | hugo            | [![pipeline status](https://gitlab.eng.vmware.com/sydney/containers/hugo/badges/main/pipeline.svg)](https://gitlab.eng.vmware.com/sydney/containers/hugo/-/commits/main)             |
 | ![](../assets/logos/mkdocs-32.png)     | mkdocs          | [![pipeline status](https://gitlab.eng.vmware.com/sydney/containers/mkdocs/badges/main/pipeline.svg)](https://gitlab.eng.vmware.com/sydney/containers/mkdocs/-/commits/main)         |
