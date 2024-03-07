@@ -1,96 +1,37 @@
 # Projects
 
-## [Containers](http://containers.lab.net/)
+## [Containers](https://grumpydumpty.github.io/containers)
 
-Overview of Containers project and jump off point for individual container documentation.
+Overview of Containers project and jump off point for individual container documentation.<br/>by Grumpy Dumpty<br/>Maintainer | January 1970 - Present<br/>[:fontawesome-brands-github:](https://github.com/grumpydumpty/containers)  [:fontawesome-solid-book:](https://grumpydumpty.github.io/containers)
 
-by Grumpy Dumpty
+## [Hugo](https://grumpydumpty.github.io/hugo)
 
-Maintainer | January 1970 - Present
+Hugo container for building static websites.<br/>by Grumpy Dumpty<br/>Maintainer | January 1970 - Present<br/>[:fontawesome-brands-github:](https://github.com/grumpydumpty/hugo)  [:fontawesome-solid-book:](https://grumpydumpty.github.io/hugo)
 
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers)  [:fontawesome-solid-book:](http://containers.lab.net)
+## [MkDocs](https://grumpydumpty.github.io/mkdocs)
 
-## [Hugo](http://containers.lab.net/hugo)
+MkDocs container for building project docs-as-code (i.e. this set of sites).<br/>by Grumpy Dumpty<br/>Maintainer | January 1970 - Present<br/>[:fontawesome-brands-github:](https://github.com/grumpydumpty/mkdocs)  [:fontawesome-solid-book:](https://grumpydumpty.github.io/mkdocs)
 
-Hugo container for building static websites.
+## [Packer](https://grumpydumpty.github.io/packer)
 
-by Grumpy Dumpty
+Bare minimum Packer container for building Packer VM templates/OVFs/etc.<br/>by Grumpy Dumpty<br/>Maintainer | January 1970 - Present<br/>[:fontawesome-brands-github:](https://github.com/grumpydumpty/packer)  [:fontawesome-solid-book:](https://grumpydumpty.github.io/packer)
 
-Maintainer | January 1970 - Present
+## [Packer Plus](https://grumpydumpty.github.io/packerplus)
 
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/hugo)  [:fontawesome-solid-book:](http://containers.lab.net/hugo)
+Packer container with additional tools (ansible/etc) for building Packer VM templates/OVFs/etc.<br/>by Grumpy Dumpty<br/>Maintainer | January 1970 - Present<br/>[:fontawesome-brands-github:](https://github.com/grumpydumpty/packerplus)  [:fontawesome-solid-book:](https://grumpydumpty.github.io/packerplus)
 
-## [MkDocs](http://containers.lab.net/mkdocs)
+## [PowerCLI](https://grumpydumpty.github.io/powercli)
 
-MkDocs container for building project docs-as-code (i.e. this set of sites).
+PowerShell container with PowerCLI modules for vSphere/etc.<br/>by Grumpy Dumpty<br/>Maintainer | January 1970 - Present<br/>[:fontawesome-brands-github:](https://github.com/grumpydumpty/powercli)  [:fontawesome-solid-book:](https://grumpydumpty.github.io/powercli)
 
-by Grumpy Dumpty
+## [Tanzu](https://grumpydumpty.github.io/tanzu)
 
-Maintainer | January 1970 - Present
+Container for working with Kubernetes clusters (including Tanzu K8s clusters) using kubectl / kubectl vsphere / kubectx / kubens / helm<br/>by Grumpy Dumpty<br/>Maintainer | January 1970 - Present<br/>[:fontawesome-brands-github:](https://github.com/grumpydumpty/tanzu)  [:fontawesome-solid-book:](https://grumpydumpty.github.io/tanzu)
 
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/mkdocs)  [:fontawesome-solid-book:](http://containers.lab.net/mkdocs)
+## [Terraform](https://grumpydumpty.github.io/terraform)
 
-## [Packer](http://containers.lab.net/packer)
+Container for working with Terraform, specifically Packer VMs templates/OVFs/etc.<br/>by Grumpy Dumpty<br/>Maintainer | January 1970 - Present<br/>[:fontawesome-brands-github:](https://github.com/grumpydumpty/terraform)  [:fontawesome-solid-book:](https://grumpydumpty.github.io/terraform)
 
-Bare minimum Packer container for building Packer VM templates/OVFs/etc.
+## [The Works](https://grumpydumpty.github.io/theworks)
 
-by Grumpy Dumpty
-
-Maintainer | January 1970 - Present
-
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/packer)  [:fontawesome-solid-book:](http://containers.lab.net/packer)
-
-## [Packer Plus](http://containers.lab.net/packerplus)
-
-Packer container with additional tools (ansible/etc) for building Packer VM templates/OVFs/etc.
-
-by Grumpy Dumpty
-
-Maintainer | January 1970 - Present
-
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/packerplus)  [:fontawesome-solid-book:](http://containers.lab.net/packerplus)
-
-## [PowerCLI](http://containers.lab.net/powercli)
-
-PowerShell container with PowerCLI modules for vSphere/etc.
-
-by Grumpy Dumpty
-
-Maintainer | January 1970 - Present
-
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/powercli)  [:fontawesome-solid-book:](http://containers.lab.net/powercli)
-
-## [Tanzu](http://containers.lab.net/tanzu)
-
-Container for working with Kubernetes clusters (including Tanzu K8s clusters) using:
-
-- kubectl
-- kubectl vsphere
-- kubectx / kubens
-- helm
-
-by Grumpy Dumpty
-
-Maintainer | January 1970 - Present
-
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/tanzu)  [:fontawesome-solid-book:](http://containers.lab.net/tanzu)
-
-## [Terraform](http://containers.lab.net/terraform)
-
-Container for working with Terraform, specifically Packer VMs templates/OVFs/etc.
-
-by Grumpy Dumpty
-
-Maintainer | January 1970 - Present
-
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/terraform)  [:fontawesome-solid-book:](http://containers.lab.net/terraform)
-
-## [The Works](http://containers.lab.net/theworks)
-
-Container with all of the utilities from the specialised containers (see above).
-
-by Grumpy Dumpty
-
-Maintainer | January 1970 - Present
-
-[:fontawesome-brands-gitlab:](https://gitlab.eng.vmware.com/sydney/containers/containers/thework)  [:fontawesome-solid-book:](http://containers.lab.net/theworks)
+Container with all of the utilities from the specialised containers (see above).<br/>by Grumpy Dumpty<br/>Maintainer | January 1970 - Present<br/>[:fontawesome-brands-github:](https://github.com/grumpydumpty/thework)  [:fontawesome-solid-book:](https://grumpydumpty.github.io/theworks)
