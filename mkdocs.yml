@@ -66,20 +66,20 @@ theme:
 
 # Plugins
 plugins:
-- search:
-    separator: '[\s\u200b\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-- open-in-new-tab
-- markdownextradata:
-    jinja_options:
-      variable_start_string: "${{"
-      variable_end_string: "}}"
-- git-revision-date-localized:
-    enabled: !ENV [CI, false]
-    enable_creation_date: false
-    exclude:
-      - index.md
-    fallback_to_build_date: true
-    type: timeago
+  - search:
+      separator: '[\s\u200b\-,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - open-in-new-tab
+  - markdownextradata:
+      jinja_options:
+        variable_start_string: "${{"
+        variable_end_string: "}}"
+  - git-revision-date-localized:
+      enabled: !ENV [CI, false]
+      enable_creation_date: false
+      exclude:
+        - index.md
+      fallback_to_build_date: true
+      type: timeago
 
 # Customization
 extra:
@@ -99,43 +99,43 @@ extra_css:
 
 # Extensions
 markdown_extensions:
-- admonition
-- attr_list
-- footnotes
-- md_in_html
-- neoteroi.spantable
-- pymdownx.critic
-- pymdownx.emoji:
-    emoji_index: !!python/name:material.extensions.emoji.twemoji
-    emoji_generator: !!python/name:material.extensions.emoji.to_svg
-    options:
-      custom_icons:
-      - material/.icons
-- pymdownx.inlinehilite
-- pymdownx.highlight:
-    use_pygments: true
-- pymdownx.snippets:
-    check_paths: true
-- pymdownx.superfences:
-    custom_fences:
-    - name: mermaid
-      class: mermaid
-      format: !!python/name:pymdownx.superfences.fence_code_format
-- pymdownx.tabbed:
-    alternate_style: true
-- pymdownx.details
-- tables
-- toc:
-    permalink: true
+  - admonition
+  - attr_list
+  - footnotes
+  - md_in_html
+  - neoteroi.spantable
+  - pymdownx.critic
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      options:
+        custom_icons:
+        - material/.icons
+  - pymdownx.inlinehilite
+  - pymdownx.highlight:
+      use_pygments: true
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+      - name: mermaid
+        class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.details
+  - tables
+  - toc:
+      permalink: true
 
 # Navigation
 nav:
-- Overview:
-  - index.md
-- Projects:
-  - projects/index.md
-  - Build Status: projects/status.md
-- Getting Started:
-  - getting-started/index.md
-- About:
-  - about/index.md
+  - Overview:
+    - index.md
+  - Projects:
+    - projects/index.md
+    - Build Status: projects/status.md
+  - Getting Started:
+    - getting-started/index.md
+  - About:
+    - about/index.md
