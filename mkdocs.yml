@@ -11,6 +11,10 @@ use_directory_urls: true
 repo_url: https://github.com/grumpydumpty/containers
 edit_uri: edit/main/docs/
 
+# site_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]  
+# repo_url: !!python/object/apply:os.getenv ["CI_PROJECT_URL"]
+# repo_name: !!python/object/apply:os.getenv ["CI_PROJECT_PATH"]
+
 # Copyright
 copyright: |
   Copyright &copy; 1970 - 2024 Grumpy Dumpty. All rights reserved.<br/><br/>
@@ -79,9 +83,6 @@ plugins:
 
 # Customization
 extra:
-  config:
-    repo_url: https://github.com/grumpydumpty/containers
-    repo_url_raw: https://github.com/grumpydumpty/containers/develop
   version:
     default: latest
     provider: mike
