@@ -4,11 +4,10 @@
 
 ## Status
 
-|                |                                                                                                                                                                          |
-|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Pipeline       | [![pipeline status](https://gitlab.eng.vmware.com/sydney/containers/containers/badges/main/pipeline.svg)](https://gitlab.eng.vmware.com/sydney/containers/containers/-/commits/main) |
-| Coverage       | [![coverage report](https://gitlab.eng.vmware.com/sydney/containers/containers/badges/main/coverage.svg)](https://gitlab.eng.vmware.com/sydney/containers/containers/-/commits/main) |
-| Latest Release | [![Latest Release](https://gitlab.eng.vmware.com/sydney/containers/containers/-/badges/release.svg)](https://gitlab.eng.vmware.com/sydney/containers/containers/-/releases)          |
+|                     |                                                                                                               |
+|---------------------|---------------------------------------------------------------------------------------------------------------|
+| Build Docker Image  | ![Build Docker](https://github.com/grumpydumpty/containers/actions/workflows/build-docker.yml/badge.svg)      |
+| Build Documentation | ![Build Documentation](https://github.com/grumpydumpty/containers/actions/workflows/build-docs.yml/badge.svg) |
 
 ## Overview
 

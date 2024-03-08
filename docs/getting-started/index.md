@@ -1,4 +1,12 @@
-# Getting Started
+---
+title: Getting Started Guides
+draft: false
+date: 2022-01-31
+authors:
+  - grumpydumpty
+---
+
+<!-- DO NOT EDIT BELOW THIS LINE -->
 
 - [Getting Started with Containers](https://grumpydumpty.github.io/containers/getting-started/)
 - [Getting Started with Hugo](https://grumpydumpty.github.io/hugo/getting-started/)

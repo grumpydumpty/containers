@@ -1,4 +1,5 @@
 ---
+title: Grumpy Dumpty's Docker Images
 draft: false
 date: 2022-01-31
 authors:
@@ -7,7 +8,6 @@ hide:
   - navigation
   - toc
 ---
-# Common Pool Docker Images
 
 <div style="display: block; margin-left: auto; margin-right: auto; width: 50%">
     <img src="assets/logos/containers-256.png"></img>
