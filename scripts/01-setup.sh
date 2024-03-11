@@ -9,10 +9,10 @@ source scripts/00-env.sh
 # pip install --no-cache-dir --upgrade pip
 # pip install --no-cache-dir -r requirements.txt
 
-# setup git
-git config --global user.name "Richard Croft"
-git config --global user.email "richard.croft@broadcom.com"
-git config --global --add safe.directory /workspaces/grumpydumpty.github.io
+# setup git (be sure to set them in 00-env.sh)
+git config --global user.name $MAIN_USER
+git config --global user.email $MAIN_EMAIL
+git config --global --add safe.directory /workspaces/containers
 
 # setup ~/.bash_aliases
 cat << EOF >> ~/.bash_aliases

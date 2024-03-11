@@ -1,8 +1,8 @@
 # Project Information
-site_name: CommonPool Docker Images
+site_name: Grumpy Dumpty Docker Images
 site_url: https://grumpydumpty.github.io/containers
 site_author: Grumpy Dumpty
-site_description: Overview of various Docker images for CommonPool.
+site_description: Overview of various (useful) Docker images.
 docs_dir: docs
 site_dir: .site
 use_directory_urls: true
