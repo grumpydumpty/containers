@@ -95,7 +95,7 @@ extra:
       link: https://github.com/grumpydumpty/containers/tree/main/docs
 extra_css:
   - assets/stylesheets/extra.css
-  - assets/stylesheets/spanable.css
+  - assets/stylesheets/neoteroi-mkdocs.css
 
 # Extensions
 markdown_extensions:
@@ -104,6 +104,7 @@ markdown_extensions:
   - footnotes
   - md_in_html
   - neoteroi.spantable
+  - neoteroi.cards
   - pymdownx.critic
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji

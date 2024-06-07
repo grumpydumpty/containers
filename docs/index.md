@@ -21,6 +21,15 @@ Nunc vehicula sagittis condimentum. Cras facilisis bibendum lorem et feugiat. In
 
 ## Summary of Docker Images
 
+[cards (docs/cards.yml)]
+<!-- [cards cols=1 (docs/cards.yml)] -->
+<!-- [cards cols=6 (docs/cards.json)] -->
+
+## Snippet sample
+
+--8<-- "docs/projects/status.md:status"
+
+<!--
 <div class="grid cards" markdown>
 
 - ![](assets/logos/containers-32.png){ .lg .middle } **Containers** - Jump off point for all docs of all container projects.
@@ -34,3 +43,4 @@ Nunc vehicula sagittis condimentum. Cras facilisis bibendum lorem et feugiat. In
 - ![](assets/logos/theworks-32.png){ .lg .middle } **The Works** - All/Most of the above in a single image.
 
 </div>
+-->
