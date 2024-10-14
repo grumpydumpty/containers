@@ -1,0 +1,56 @@
+[
+    {
+      "title": "Containers",
+      "content": "Jump off point for all docs of all container projects.",
+      "image": "assets/logos/containers-32.png",
+      "url": "https://grumpydumpty.github.io/"
+    },
+    {
+      "title": "Hugo",
+      "content": "For building static websites using Hugo.",
+      "image": "assets/logos/hugo-32.png",
+      "url": "https://grumpydumpty.github.io/"
+    },
+    {
+      "title": "MkDocs",
+      "content": "For building static websites using MkDocs.",
+      "image": "assets/logos/mkdocs-32.png",
+      "url": "https://grumpydumpty.github.io/"
+    },
+    {
+      "title": "Packer",
+      "content": "For building templated VMs using Hashicorp Packer.",
+      "image": "assets/logos/packer-32.png",
+      "url": "https://grumpydumpty.github.io/"
+    },
+    {
+      "title": "Packer Plus",
+      "content": "For building templated VMs using Ansible/Packer/etc.",
+      "image": "assets/logos/packer-32.png",
+      "url": "https://grumpydumpty.github.io/"
+    },
+    {
+      "title": "PowerCLI",
+      "content": "For running PowerShell and VMware PowerCLI scripts.",
+      "image": "assets/logos/powercli-32.png",
+      "url": "https://grumpydumpty.github.io/"
+    },
+    {
+      "title": "Tanzu",
+      "content": "For interacting with Kubernetes/Tanzu clusters.",
+      "image": "assets/logos/tanzu-32.png",
+      "url": "https://grumpydumpty.github.io/"
+    },
+    {
+      "title": "Terraform",
+      "content": "For managing VMs/OVFs/etc on VMware vSphere.",
+      "image": "assets/logos/terraform-32.png",
+      "url": "https://grumpydumpty.github.io/"
+    },
+    {
+      "title": "The Works",
+      "content": "All/Most of the above in a single image.",
+      "image": "assets/logos/theworks-32.png",
+      "url": "https://grumpydumpty.github.io/"
+    }
+]
