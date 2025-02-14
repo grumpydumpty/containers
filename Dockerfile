@@ -68,7 +68,7 @@ RUN chown -R root:root /usr/local/bin/ && \
     chmod 755 /usr/lib/
 
 # set user
-USER ${USER}
+USER ${USER}:${GROUP}
 
 # set working directory
 WORKDIR /workspace
