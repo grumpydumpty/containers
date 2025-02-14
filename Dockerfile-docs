@@ -2,7 +2,7 @@
 # build markdown to html
 
 # use mkdocs:dev image
-FROM harbor.sydeng.vmware.com/library/mkdocs:dev AS builder
+FROM mkdocs:dev AS builder
 
 # set work dir
 WORKDIR /workspaces
@@ -10,9 +10,6 @@ WORKDIR /workspaces
 # copy source to build
 COPY --chown=vlabs:users . .
 RUN mkdocs build
-
-# fix permissions
-#RUN find /app/html -type d -exec chmod 0755 {} \; && find /app/html -type f -exec chmod 0644 {} \;
 
 #############################################################################
 # build the final image with content
@@ -42,13 +39,6 @@ LABEL com.vmware.eocto.project="containers/www"
 
 # copy the html to wwwroot
 COPY --from=builder /workspaces/.site/ ./
-#COPY --chmod=nobody:nogroup --from=builder /workspace/.site/ ./
-#COPY --chmod=user:user --from=builder /workspace/.site/ ./
-
-#USER user
-
-# fix permissions
-#RUN find . -type d -exec chmod 0755 {} \; && find . -type f -exec chmod 0644 {} \;
 
 #############################################################################
 # vim: ft=unix sync=dockerfile ts=4 sw=4 et tw=78:

@@ -1,0 +1,61 @@
+FROM base:dev
+
+# set argument defaults
+ARG OS_ARCH="amd64"
+ARG OS_ARCH2="x86_64"
+
+# Switch to root to install OS packages
+USER root:root
+
+# update repositories, install packages, and then clean up
+RUN tdnf update -y && \
+    # grab what we can via standard packages
+    tdnf install -y \
+        extra-package-1 \
+        extra-package-2 && \
+    # clean up
+    tdnf clean all
+
+# install python apps/packages via requirements.txt
+COPY ./requirements.txt .
+RUN pip3 install --no-cache-dir --upgrade pip && \
+    pip3 install --no-cache-dir -r ./requirements.txt
+
+# install gitflow
+RUN curl -skSLo gitflow-installer.sh https://raw.githubusercontent.com/petervanderdoes/gitflow-avh/develop/contrib/gitflow-installer.sh && \
+    chmod +x ./gitflow-installer.sh && \
+    ./gitflow-installer.sh install stable && \
+    chown root:root /usr/local/bin/git-flow && \
+    chmod 0755 /usr/local/bin/git-flow && \
+    rm -rf ./gitflow-installer.sh /gitflow/
+
+# grab git-lfs
+RUN GIT_LFS_VERSION=$(curl -H 'Accept: application/json' -sSL https://github.com/git-lfs/git-lfs/releases/latest | jq -r '.tag_name' | tr -d 'v') && \
+    curl -skSLo git-lfs.tar.gz https://github.com/git-lfs/git-lfs/releases/download/v${GIT_LFS_VERSION}/git-lfs-linux-${OS_ARCH}-v${GIT_LFS_VERSION}.tar.gz && \
+    tar xzf git-lfs.tar.gz git-lfs-${GIT_LFS_VERSION}/git-lfs && \
+    mv git-lfs-${GIT_LFS_VERSION}/git-lfs /usr/local/bin/ && \
+    chown root:root /usr/local/bin/git-lfs && \
+    chmod 0755 /usr/local/bin/git-lfs && \
+    rm -rf git-lfs.tar.gz git-lfs-${GIT_LFS_VERSION}
+
+# grab gh
+RUN GHCLI_VERSION=$(curl -H 'Accept: application/json' -sSL https://github.com/cli/cli/releases/latest | jq -r '.tag_name' | tr -d 'v') && \
+    curl -skSLo gh-cli.tar.gz https://github.com/cli/cli/releases/download/v${GHCLI_VERSION}/gh_${GHCLI_VERSION}_linux_${OS_ARCH}.tar.gz && \
+    tar xzf gh-cli.tar.gz gh_${GHCLI_VERSION}_linux_${OS_ARCH}/bin/gh && \
+    mv gh_${GHCLI_VERSION}_linux_${OS_ARCH}/bin/gh /usr/local/bin/ && \
+    chown root:root /usr/local/bin/gh && \
+    chmod 0755 /usr/local/bin/gh && \
+    rm -rf gh-cli.tar.gz gh_${GHCLI_VERSION}_linux_${OS_ARCH}
+
+# harden and remove unnecessary packages
+RUN chown -R root:root /usr/local/bin/ && \
+    chown root:root /var/log && \
+    chmod 0640 /var/log && \
+    chown root:root /usr/lib/ && \
+    chmod 755 /usr/lib/
+
+# switch back to non-root user
+USER ${USER}
+
+#############################################################################
+# vim: ft=unix sync=dockerfile ts=4 sw=4 et tw=78:

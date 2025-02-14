@@ -9,7 +9,7 @@
 BASE=${PWD}
 
 # image and container name
-IMAGE=hugo
+IMAGE=base
 CONTAINER=$IMAGE
 
 # image tag
@@ -19,15 +19,16 @@ TAG=dev
 VERSION=0.0.1
 
 # project info
-PROJECT="sydney/containers/$IMAGE"
+PROJECT="grumpydumpty/containers"
 
 # maintainer info
-MAIN_USER="Richard Croft"
-MAIN_EMAIL="rcroft@vmware.com"
-MAIN_URL="https://gitlab.eng.vmware.com/rcroft"
+MAIN_USER="grumpydumpty"
+MAIN_NAME="Richard Croft"
+MAIN_EMAIL="arjaycroft@gmail.com"
+MAIN_URL="https://github.com/$MAIN_USER"
 
 # below needs to match "ARG LABEL_PREFIX=" in Dockerfile
-LABEL_PREFIX=com.vmware.eocto
+LABEL_PREFIX=net.lab
 
 # domain name for container hostname
 DOMAIN="lab.net"
@@ -36,4 +37,4 @@ DOMAIN="lab.net"
 WORKDIR="/workspace"
 
 # repository to push image to
-REPO=harbor.sydeng.vmware.com/rcroft
+REPO=ghcr.io/grumpydumpty

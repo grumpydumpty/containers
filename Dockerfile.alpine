@@ -1,0 +1,70 @@
+FROM alpine:latest
+
+# set argument defaults
+ARG OS_ARCH="amd64"
+ARG OS_ARCH2="x86_64"
+ARG USER=vlabs
+ARG USER_ID=1000
+ARG GROUP=users
+ARG GROUP_ID=100
+
+# update repositories, install packages, and then clean up
+RUN apk add --no-cache \
+        bash \
+        bindutils \
+        ca-certificates \
+        coreutils \
+        curl \
+        diffutils \
+        findutils \
+        gawk \
+        git \
+        htop \
+        jq \
+        less \
+        mc \
+        ncurses \
+        openssh-client \
+        tar \
+        tree \
+        tmux \
+        unzip \
+        vim && \
+    # add user/group
+    # addgroup ${GROUP} && \
+    adduser -D -s /bin/bash -G ${GROUP} ${USER} && \
+    # set ownership on home dir
+    chown -R ${USER}:${GROUP} /home/${USER} && \
+    # set permissions
+    chmod 0700 /home/${USER} && \
+    # create /workspace
+    mkdir -p /workspace && \
+    # give new user ownership of /workspace
+    chown -R ${USER}:${GROUP} /workspace && \
+    # set permissions
+    # chmod 0700 /workspace && \
+    # set git config
+    git config --system --add init.defaultBranch "main" && \
+    git config --system --add safe.directory "/workspace"
+
+# copy bootstrap scripts into image
+COPY --chown=${USER}:${GROUP} bootstrap*.sh /workspace
+
+# harden and remove unnecessary packages
+RUN chown -R root:root /usr/local/bin/ && \
+    chown root:root /var/log && \
+    chmod 0640 /var/log && \
+    chown root:root /usr/lib/ && \
+    chmod 755 /usr/lib/
+
+# set user
+USER ${USER}
+
+# set working directory
+WORKDIR /workspace
+
+# set entrypoint to bash
+ENTRYPOINT ["bash"]
+
+#############################################################################
+# vim: ft=unix sync=dockerfile ts=4 sw=4 et tw=78:
