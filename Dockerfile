@@ -27,6 +27,7 @@ RUN tdnf update -y && \
         findutils \
         gawk \
         git \
+        gnupg \
         htop \
         jq \
         less \
