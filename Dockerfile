@@ -15,6 +15,7 @@ ENV LANG=en_US.UTF-8
 # update repositories, install packages, and then clean up
 RUN tdnf update -y && \
     tdnf install -y glibc-i18n && \
+    echo "en_US.UTF-8 UTF-8" > /etc/locale-gen.conf && \
     locale-gen.sh && \
     # grab what we can via standard packages
     tdnf install -y \
@@ -31,6 +32,7 @@ RUN tdnf update -y && \
         htop \
         jq \
         less \
+        make \
         mc \
         ncurses \
         openssh \
