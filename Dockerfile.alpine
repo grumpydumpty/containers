@@ -45,17 +45,16 @@ RUN apk add --no-cache \
     # chmod 0700 /workspace && \
     # set git config
     git config --system --add init.defaultBranch "main" && \
-    git config --system --add safe.directory "/workspace"
-
-# copy bootstrap scripts into image
-COPY --chown=${USER}:${GROUP} bootstrap*.sh /workspace
-
-# harden and remove unnecessary packages
-RUN chown -R root:root /usr/local/bin/ && \
+    git config --system --add safe.directory "/workspace" && \
+    # harden and remove unnecessary packages
+    chown -R root:root /usr/local/bin/ && \
     chown root:root /var/log && \
     chmod 0640 /var/log && \
     chown root:root /usr/lib/ && \
     chmod 755 /usr/lib/
+
+# copy bootstrap scripts into image
+COPY --chown=${USER}:${GROUP} bootstrap*.sh /workspace
 
 # set user
 USER ${USER}:${GROUP}

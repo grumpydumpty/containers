@@ -16,7 +16,13 @@ RUN tdnf update -y && \
         extra-package-1 \
         extra-package-2 && \
     # clean up
-    tdnf clean all
+    tdnf clean all && \
+    # harden and remove unnecessary packages
+    chown -R root:root /usr/local/bin/ && \
+    chown root:root /var/log && \
+    chmod 0640 /var/log && \
+    chown root:root /usr/lib/ && \
+    chmod 755 /usr/lib/
 
 # install python apps/packages via requirements.txt
 COPY ./requirements.txt .
@@ -48,13 +54,6 @@ RUN GHCLI_VERSION=$(curl -H 'Accept: application/json' -sSL https://github.com/c
     chown root:root /usr/local/bin/gh && \
     chmod 0755 /usr/local/bin/gh && \
     rm -rf gh-cli.tar.gz gh_${GHCLI_VERSION}_linux_${OS_ARCH}
-
-# harden and remove unnecessary packages
-RUN chown -R root:root /usr/local/bin/ && \
-    chown root:root /var/log && \
-    chmod 0640 /var/log && \
-    chown root:root /usr/lib/ && \
-    chmod 755 /usr/lib/
 
 # switch back to non-root user
 USER ${USER}:${GROUP}

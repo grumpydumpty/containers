@@ -61,10 +61,9 @@ RUN tdnf update -y && \
     git config --system --add safe.directory "/workspace" && \
     # clean up
     tdnf erase -y shadow && \
-    tdnf clean all
-
-# harden and remove unnecessary packages
-RUN chown -R root:root /usr/local/bin/ && \
+    tdnf clean all && \
+    # harden and remove unnecessary packages
+    chown -R root:root /usr/local/bin/ && \
     chown root:root /var/log && \
     chmod 0640 /var/log && \
     chown root:root /usr/lib/ && \
