@@ -76,7 +76,7 @@ USER ${USER}:${GROUP}
 WORKDIR /workspace
 
 # set default command to bash, do not set an entry point
-CMD [ "/usr/bin/bash", "-l", "-c"]
+CMD [ "bash", "-l" ]
 
 #############################################################################
 # vim: ft=unix sync=dockerfile ts=4 sw=4 et tw=78:
