@@ -4,9 +4,7 @@ FROM photon:5.0
 ARG OS_ARCH="amd64"
 ARG OS_ARCH2="x86_64"
 ARG USER=vlabs
-ARG USER_ID=1000
 ARG GROUP=users
-ARG GROUP_ID=100
 
 # set locale
 ENV LANGUAGE=en_US
