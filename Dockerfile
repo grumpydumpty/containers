@@ -9,6 +9,7 @@ ARG GROUP=users
 # set locale
 ENV LANGUAGE=en_US
 ENV LANG=en_US.UTF-8
+ENV TERM=linux
 
 # update repositories, install packages, and then clean up
 RUN tdnf update -y && \
