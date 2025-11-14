@@ -34,7 +34,7 @@ RUN tdnf update -y && \
         make \
         mc \
         ncurses \
-        openssh \
+        openssh-clients \
         shadow \
         tar \
         tree \
@@ -78,4 +78,4 @@ WORKDIR /workspace
 # CMD [ "bash", "-l" ]
 
 #############################################################################
-# vim: ft=unix sync=dockerfile ts=4 sw=4 et tw=78:
+# vim: ft=unix ts=4 sw=4 et tw=78:
