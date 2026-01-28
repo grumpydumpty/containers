@@ -43,6 +43,8 @@ RUN tdnf update -y && \
     # clean up
     tdnf erase -y shadow && \
     tdnf clean all && \
+    # set ownership on user homedir
+    chown -R ${USER}:${GROUP} /home/${USER} && \
     # harden and remove unnecessary packages
     chown -R root:root /usr/local/bin/ && \
     chown root:root /var/log && \

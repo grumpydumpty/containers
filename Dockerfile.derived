@@ -17,6 +17,8 @@ RUN tdnf update -y && \
         extra-package-2 && \
     # clean up
     tdnf clean all && \
+    # set ownership on user homedir
+    chown -R ${USER}:${GROUP} /home/${USER} && \
     # harden and remove unnecessary packages
     chown -R root:root /usr/local/bin/ && \
     chown root:root /var/log && \
