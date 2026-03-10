@@ -1,7 +1,7 @@
 ---
 title: Project Status
 draft: false
-date: 2022-01-31
+date: 2026-03-10
 authors:
   - grumpydumpty
 # hide:
@@ -15,7 +15,7 @@ authors:
 
 |                                        | Container Image | Build Status                                                                                             | Docs Status                                                                                                   |
 |----------------------------------------|-----------------|----------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------|
-| ![](../assets/logos/containers-32.png) | containers      | _(Documentation only repository)_                                                                        | ![Build Documentation](https://github.com/grumpydumpty/containers/actions/workflows/build-docs.yml/badge.svg) |
+| ![](../assets/logos/containers-32.png) | containers      | ![Build Docker](https://github.com/grumpydumpty/containers/actions/workflows/build-docker.yml/badge.svg) | ![Build Documentation](https://github.com/grumpydumpty/containers/actions/workflows/build-docs.yml/badge.svg) |
 | ![](../assets/logos/hugo-32.png)       | hugo            | ![Build Docker](https://github.com/grumpydumpty/hugo/actions/workflows/build-docker.yml/badge.svg)       | ![Build Documentation](https://github.com/grumpydumpty/hugo/actions/workflows/build-docs.yml/badge.svg)       |
 | ![](../assets/logos/mkdocs-32.png)     | mkdocs          | ![Build Docker](https://github.com/grumpydumpty/mkdocs/actions/workflows/build-docker.yml/badge.svg)     | ![Build Documentation](https://github.com/grumpydumpty/mkdocs/actions/workflows/build-docs.yml/badge.svg)     |
 | ![](../assets/logos/packer-32.png)     | packer          | ![Build Docker](https://github.com/grumpydumpty/packer/actions/workflows/build-docker.yml/badge.svg)     | ![Build Documentation](https://github.com/grumpydumpty/packer/actions/workflows/build-docs.yml/badge.svg)     |
