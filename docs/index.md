@@ -36,7 +36,6 @@ Nunc vehicula sagittis condimentum. Cras facilisis bibendum lorem et feugiat. In
 - ![](assets/logos/hugo-32.png){ .lg .middle } **Hugo** - For building static websites using Hugo.
 - ![](assets/logos/mkdocs-32.png){ .lg .middle } **MkDocs** - For building static websites using MkDocs.
 - ![](assets/logos/packer-32.png){ .lg .middle } **Packer** - For building templated VMs using Hashicorp Packer.
-- ![](assets/logos/packer-32.png){ .lg .middle } **Packer Plus** - For building templated VMs using Ansible/Packer/etc.
 - ![](assets/logos/powercli-32.png){ .lg .middle } **PowerCLI** - For running PowerShell and VMware PowerCLI scripts.
 - ![](assets/logos/tanzu-32.png){ .lg .middle } **Tanzu** - For interacting with Kubernetes/Tanzu clusters.
 - ![](assets/logos/terraform-32.png){ .lg .middle } **Terraform** - For managing VMs/OVFs/etc on VMware vSphere.

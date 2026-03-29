@@ -24,12 +24,6 @@
       "url": "https://grumpydumpty.github.io/"
     },
     {
-      "title": "Packer Plus",
-      "content": "For building templated VMs using Ansible/Packer/etc.",
-      "image": "assets/logos/packer-32.png",
-      "url": "https://grumpydumpty.github.io/"
-    },
-    {
       "title": "PowerCLI",
       "content": "For running PowerShell and VMware PowerCLI scripts.",
       "image": "assets/logos/powercli-32.png",
