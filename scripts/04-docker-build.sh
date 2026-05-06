@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source scripts/00-env.sh
+#source scripts/00-env-photon-dev.sh
 
 #############################################################################
 # build docker image
@@ -19,9 +20,9 @@ docker build                                                                    
     --label "$LABEL_PREFIX.project=$PROJECT"                                           \
     .
     ## alternate steps
-    # -f Dockerfile.minimal                                                              \
     # --progress=plain                                                                   \
     # --no-cache                                                                         \
+    # -f Dockerfile.photon-dev                                                           \
     # .
 
 #############################################################################

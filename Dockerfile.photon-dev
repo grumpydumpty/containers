@@ -1,0 +1,9 @@
+FROM photon:5.0
+
+# update repositories, install packages, and then clean up
+RUN tdnf update -y && \
+    # install set of tools used frequently when experimenting
+    tdnf install -y bash coreutils curl gawk git jq less tar unzip && \
+    # clean up
+    tdnf erase -y shadow && \
+    tdnf clean all
