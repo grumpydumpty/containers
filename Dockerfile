@@ -1,21 +1,22 @@
 FROM photon:5.0
 
 # set argument defaults
-ARG OS_ARCH="amd64"
-ARG OS_ARCH2="x86_64"
 ARG USER=vlabs
 ARG GROUP=users
 
 # set locale
-ENV LANGUAGE=en_US
-ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_AU
+ENV LANG=en_AU.UTF-8
 ENV TERM=linux
 
 # update repositories, install packages, and then clean up
 RUN tdnf update -y && \
     tdnf install -y glibc-i18n && \
-    echo "en_US.UTF-8 UTF-8" > /etc/locale-gen.conf && \
+    set Australia/Sydney timezone && \
+    echo "${LANG} UTF-8" > /etc/locale-gen.conf && \
     locale-gen.sh && \
+    ln -sf /usr/share/zoneinfo/Australia/Sydney /etc/localtime && \
+    # localectl set-locale LANG="${LANG}" LC_CTYPE="${LANG}" && \
     # grab what we can via standard packages
     tdnf install -y \
         bash \
