@@ -40,7 +40,7 @@ RUN tdnf update -y && \
         tar \
         tree \
         tmux \
-        unzip \
+        7zip \
         vim && \
     # add user/group
     # groupadd -g ${GROUP_ID} ${GROUP} && \
