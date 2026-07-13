@@ -1,0 +1,91 @@
+FROM ubuntu:26.04
+
+## set argument defaults
+ARG USER=vlabs
+ARG GROUP=users
+
+## prevent interactive prompts
+ARG DEBIAN_FRONTEND=noninteractive
+
+## set timezone
+ENV TZ=Australia/Sydney
+
+## set locale
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US
+ENV LC_ALL=en_US.UTF-8
+
+## update repositories, install packages, and then clean up
+RUN apt update -y && \
+    # set locale/timezone/etc
+    apt install -y tzdata && \
+    ln -snf /usr/share/zoneinfo/${TZ} /etc/localtime && \
+    echo ${TZ} > /etc/timezone && \
+    # grab what we can via standard packages
+    apt install -y \
+        bash \
+        bind9-dnsutils \
+        ca-certificates \
+        coreutils \
+        curl \
+        diffutils \
+        findutils \
+        gawk \
+        git \
+        gnupg \
+        htop \
+        jq \
+        less \
+        make \
+        mc \
+        ncurses-bin \
+        openssh-client \
+        passwd \
+        tar \
+        tree \
+        tmux \
+        p7zip-full \
+        neovim && \
+    # add user/group
+    # groupadd -g ${GROUP_ID} ${GROUP} && \
+    # useradd -u ${USER_ID} -g ${GROUP} -m ${USER} && \
+    useradd -g ${GROUP} -m ${USER} && \
+    # set ownership on home dir
+    chown -R ${USER}:${GROUP} /home/${USER} && \
+    # set permissions
+    chmod 0700 /home/${USER} && \
+    # create /workspace
+    mkdir -p /workspace && \
+    # give new user ownership of /workspace
+    chown ${USER}:${GROUP} /workspace && \
+    # set permissions
+    # chmod 0700 /workspace && \
+    # set git config
+    git config --system --add init.defaultBranch "main" && \
+    git config --system --add safe.directory "/workspace" && \
+    # clean up
+    apt remove -y passwd && \
+    apt clean -y && \
+    apt autoremove --purge -y && \
+    # harden and remove unnecessary packages
+    rm -rf /var/lib/apt/lists/* && \
+    chown -R root:root /usr/local/bin && \
+    chown -R root:root /var/log && \
+    chmod 0640 /var/log/ && \
+    chown -R root:root /usr/lib && \
+    chmod 0755 /usr/lib
+
+### copy bootstrap scripts into image
+# COPY --chown=${USER}:${GROUP} bootstrap*.sh /workspace
+
+## set user
+USER ${USER}:${GROUP}
+
+## set working directory
+WORKDIR /workspace
+
+## set entrypoint to bash
+ENTRYPOINT ["bash"]
+
+#############################################################################
+## vim: ft=unix sync=dockerfile ts=4 sw=4 et tw=78:
