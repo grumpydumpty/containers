@@ -16,13 +16,13 @@ ARG DEBIAN_FRONTEND=noninteractive
 # ENV LC_ALL=en_US.UTF-8
 
 ## update repositories, install packages, and then clean up
-RUN apt update -y && \
+RUN apt-get update -y && \
     # set locale/timezone/etc
     # apt install -y tzdata && \
     # ln -snf /usr/share/zoneinfo/${TZ} /etc/localtime && \
     # echo ${TZ} > /etc/timezone && \
     # grab what we can via standard packages
-    apt install -y \
+    apt-get install -y \
         bash \
         bind9-dnsutils \
         ca-certificates \
@@ -64,9 +64,9 @@ RUN apt update -y && \
     git config --system --add init.defaultBranch "main" && \
     git config --system --add safe.directory "/workspace" && \
     # clean up
-    apt remove -y passwd && \
-    apt clean -y && \
-    apt autoremove --purge -y && \
+    apt-get remove -y passwd && \
+    apt-get clean -y && \
+    apt-get autoremove --purge -y && \
     # harden and remove unnecessary packages
     rm -rf /var/lib/apt/lists/* && \
     chown -R root:root /usr/local/bin && \

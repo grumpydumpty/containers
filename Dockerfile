@@ -1,30 +1,26 @@
-FROM ubuntu:26.04
+FROM photon:5.0
 
-## set argument defaults
+# set argument defaults
 ARG USER=vlabs
 ARG GROUP=users
 
-## prevent interactive prompts
-ARG DEBIAN_FRONTEND=noninteractive
+# set locale
+ENV LANGUAGE=en_AU
+ENV LANG=en_AU.UTF-8
+ENV TERM=linux
 
-# ## set timezone
-# ENV TZ=Australia/Sydney
-
-# ## set locale
-# ENV LANG=en_US.UTF-8
-# ENV LANGUAGE=en_US
-# ENV LC_ALL=en_US.UTF-8
-
-## update repositories, install packages, and then clean up
-RUN apt update -y && \
-    # set locale/timezone/etc
-    # apt install -y tzdata && \
-    # ln -snf /usr/share/zoneinfo/${TZ} /etc/localtime && \
-    # echo ${TZ} > /etc/timezone && \
+# update repositories, install packages, and then clean up
+RUN tdnf update -y && \
+    tdnf install -y glibc-i18n && \
+    set Australia/Sydney timezone && \
+    echo "${LANG} UTF-8" > /etc/locale-gen.conf && \
+    locale-gen.sh && \
+    ln -sf /usr/share/zoneinfo/Australia/Sydney /etc/localtime && \
+    # localectl set-locale LANG="${LANG}" LC_CTYPE="${LANG}" && \
     # grab what we can via standard packages
-    apt install -y \
+    tdnf install -y \
         bash \
-        bind9-dnsutils \
+        bindutils \
         ca-certificates \
         coreutils \
         curl \
@@ -38,14 +34,14 @@ RUN apt update -y && \
         less \
         make \
         mc \
-        ncurses-bin \
-        openssh-client \
-        passwd \
+        ncurses \
+        openssh-clients \
+        shadow \
         tar \
         tree \
         tmux \
-        p7zip-full \
-        neovim && \
+        7zip \
+        vim && \
     # add user/group
     # groupadd -g ${GROUP_ID} ${GROUP} && \
     # useradd -u ${USER_ID} -g ${GROUP} -m ${USER} && \
@@ -57,35 +53,32 @@ RUN apt update -y && \
     # create /workspace
     mkdir -p /workspace && \
     # give new user ownership of /workspace
-    chown ${USER}:${GROUP} /workspace && \
+    chown -R ${USER}:${GROUP} /workspace && \
     # set permissions
     # chmod 0700 /workspace && \
     # set git config
     git config --system --add init.defaultBranch "main" && \
     git config --system --add safe.directory "/workspace" && \
     # clean up
-    apt remove -y passwd && \
-    apt clean -y && \
-    apt autoremove --purge -y && \
+    tdnf erase -y shadow && \
+    tdnf clean all && \
+    # set ownership on user homedir
+    chown -R ${USER}:${GROUP} /home/${USER} && \
     # harden and remove unnecessary packages
-    rm -rf /var/lib/apt/lists/* && \
-    chown -R root:root /usr/local/bin && \
-    chown -R root:root /var/log && \
-    chmod 0640 /var/log/ && \
-    chown -R root:root /usr/lib && \
-    chmod 0755 /usr/lib
+    chown -R root:root /usr/local/bin/ && \
+    chown root:root /var/log && \
+    chmod 0640 /var/log && \
+    chown root:root /usr/lib/ && \
+    chmod 755 /usr/lib/
 
-### copy bootstrap scripts into image
-# COPY --chown=${USER}:${GROUP} bootstrap*.sh /workspace
-
-## set user
+# set user
 USER ${USER}:${GROUP}
 
-## set working directory
+# set working directory
 WORKDIR /workspace
 
-## set entrypoint to bash
-ENTRYPOINT ["bash"]
+# set default command to bash, do not set an entry point
+# CMD [ "bash", "-l" ]
 
 #############################################################################
-## vim: ft=unix sync=dockerfile ts=4 sw=4 et tw=78:
+# vim: ft=unix ts=4 sw=4 et tw=78:
