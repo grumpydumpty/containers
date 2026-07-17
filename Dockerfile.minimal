@@ -17,12 +17,16 @@ RUN tdnf update -y && \
     tdnf install -y \
         bash \
         ca-certificates \
+        coreutils \
         curl \
+        gawk \
         git \
         jq \
+        less \
         shadow \
         tar \
-        unzip && \
+        unzip\
+        7zip && \
     # add user/group
     # groupadd -g ${GROUP_ID} ${GROUP} && \
     # useradd -u ${USER_ID} -g ${GROUP} -m ${USER} && \
