@@ -23,6 +23,7 @@ RUN apt-get update -y && \
     # echo ${TZ} > /etc/timezone && \
     # grab what we can via standard packages
     apt-get install -y \
+        apt-transport-https \
         bash \
         bind9-dnsutils \
         ca-certificates \
@@ -39,13 +40,16 @@ RUN apt-get update -y && \
         make \
         mc \
         ncurses-bin \
+        neovim \
         openssh-client \
+        p7zip-full \
         passwd \
         tar \
-        tree \
         tmux \
-        p7zip-full \
-        neovim && \
+        tree \
+        unzip && \
+    # remove ubuntu user
+    deluser --remove-home ubuntu && \
     # add user/group
     # groupadd -g ${GROUP_ID} ${GROUP} && \
     # useradd -u ${USER_ID} -g ${GROUP} -m ${USER} && \
