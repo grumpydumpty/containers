@@ -1,6 +1,6 @@
-#!/bin/bash
+#!/usr/bin/bash
 
-source scripts/00-env.sh
+source ./scripts/00-env.sh
 #source scripts/00-env-photon-dev.sh
 
 #############################################################################
