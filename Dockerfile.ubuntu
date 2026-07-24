@@ -44,10 +44,13 @@ RUN apt-get update -y && \
         openssh-client \
         p7zip-full \
         passwd \
+        software-properties-common \
         tar \
         tmux \
         tree \
         unzip && \
+    # update ca certs
+    # update-ca-certificates && \
     # remove ubuntu user
     deluser --remove-home ubuntu && \
     # add user/group
@@ -67,20 +70,17 @@ RUN apt-get update -y && \
     # set git config
     git config --system --add init.defaultBranch "main" && \
     git config --system --add safe.directory "/workspace" && \
-    # clean up
+    # clean up - remove unnecessary packages
     apt-get remove -y passwd && \
+    apt-get autoremove -y && \
     apt-get clean -y && \
-    apt-get autoremove --purge -y && \
-    # harden and remove unnecessary packages
     rm -rf /var/lib/apt/lists/* && \
+    # harden and lock down
     chown -R root:root /usr/local/bin && \
     chown -R root:root /var/log && \
     chmod 0640 /var/log/ && \
     chown -R root:root /usr/lib && \
     chmod 0755 /usr/lib
-
-### copy bootstrap scripts into image
-# COPY --chown=${USER}:${GROUP} bootstrap*.sh /workspace
 
 ## set user
 USER ${USER}:${GROUP}
