@@ -3,7 +3,10 @@ FROM photon:5.0
 # update repositories, install packages, and then clean up
 RUN tdnf update -y && \
     # install set of tools used frequently when experimenting
-    tdnf install -y bash coreutils curl gawk git jq less tar unzip 7zip && \
+    tdnf install -y bash coreutils curl gawk git jq less ncurses tar xz 7zip && \
     # clean up
     tdnf erase -y shadow && \
     tdnf clean all
+
+#############################################################################
+# vim: ft=unix syn=dockerfile ts=4 sw=4 et tw=78:
