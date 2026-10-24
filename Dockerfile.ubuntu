@@ -7,20 +7,22 @@ ARG GROUP=users
 ## prevent interactive prompts
 ARG DEBIAN_FRONTEND=noninteractive
 
-# ## set timezone
-# ENV TZ=Australia/Sydney
+## set timezone
+ENV TZ=Australia/Sydney
 
-# ## set locale
-# ENV LANG=en_US.UTF-8
-# ENV LANGUAGE=en_US
-# ENV LC_ALL=en_US.UTF-8
+## set locale
+ENV LANG=en_US.UTF-8
+ENV LANGUAGE=en_US
+ENV LC_ALL=en_US.UTF-8
 
 ## update repositories, install packages, and then clean up
 RUN apt-get update -y && \
     # set locale/timezone/etc
-    # apt install -y tzdata && \
-    # ln -snf /usr/share/zoneinfo/${TZ} /etc/localtime && \
-    # echo ${TZ} > /etc/timezone && \
+    apt install -y tzdata locales && \
+    sed -i '/en_US.UTF-8/s/^# //g' /etc/locale.gen && \
+    locale-gen && \
+    ln -fs /usr/share/zoneinfo/${TZ} /etc/localtime && \
+    dpkg-reconfigure tzdata && \
     # grab what we can via standard packages
     apt-get install -y \
         apt-transport-https \
